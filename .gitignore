@@ -1,0 +1,35 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore everything
+*
+
+# Git and Gitignore
+!.gitignore
+
+# Don't ignore directories
+!*/
+Archive
+
+# Don't ignore anywhere
+!**/*.Rmd
+!**/*.md
+!**/*.R
+!**/*.Rproj
+
+!**/*.xlsx
+!**/*.jpg
+!**/*.pdf
+!**/*.RDS
+
+# session info
+!Session\ info/*.txt
+
+# Ignore
+Data/Data - MinXray Community Screening 23-12-22 cleaned.xlsx
+Data/Updated Data Publication.xlsx
+function_utility.R
+ACF\ analysis.R
+.DS_Store
