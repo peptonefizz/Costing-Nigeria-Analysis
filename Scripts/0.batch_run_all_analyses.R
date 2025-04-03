@@ -1,6 +1,5 @@
-library(rmarkdown)
-library(here)
-library(ggplot2)
+suppressMessages(if (!require("pacman")) install.packages("pacman"))
+pacman::p_load(rmarkdown,here, ggplot2)
 
 # Patch ggsave to auto-create directories
 unlockBinding("ggsave", as.environment("package:ggplot2"))
