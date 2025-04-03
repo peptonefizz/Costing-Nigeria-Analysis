@@ -140,7 +140,7 @@ ggplot(summary_table_ely5_ce, aes(x = incremental_effect, y = incremental_cost, 
   geom_point(aes(color = Status), size = 3) +
   geom_text_repel() +
   geom_line(data = non_dominated, aes(x = incremental_effect, y = incremental_cost), color = '#264653', linetype = 'dotted') +
-  geom_abline(intercept = 0, slope = WTP, linetype = 'dashed', color = '#2A9D8F', size = 0.7)+
+  # geom_abline(intercept = 0, slope = WTP, linetype = 'dashed', color = '#2A9D8F', size = 0.7)+ #Hiding WTP
   labs(
     x = 'Incremental Effect (TB cases diagnosed)',
     y = 'Incremental Cost (US$)'
@@ -148,10 +148,10 @@ ggplot(summary_table_ely5_ce, aes(x = incremental_effect, y = incremental_cost, 
   ) +
   scale_color_manual(values = c('Non-dominated' = '#1D3557', 'Strictly Dominated' = '#B22222', 'Extended Dominated' = '#F4A261')) +
   scale_y_continuous(limits = c(0, 25000), breaks = seq(0, 28000, by = 5000), labels = scales::dollar_format()) +  
-  annotate("text", x = 0, 
-         y = 25000, 
-         label = paste0("WTP = US$ ", round(WTP, 0)), 
-         color = '#2A9D8F', hjust = -0.1, vjust = 1.5, size = 3.5)+
+  # annotate("text", x = 0, 
+  #        y = 25000, 
+  #        label = paste0("WTP = US$ ", round(WTP, 0)), 
+  #        color = '#2A9D8F', hjust = -0.1, vjust = 1.5, size = 3.5)+
   theme_minimal(base_family = "Helvetica")+
   theme(legend.position = "bottom",
         legend.title = element_blank(),
