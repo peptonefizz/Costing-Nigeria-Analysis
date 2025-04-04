@@ -159,7 +159,7 @@ summary_ely5_cxr %>%
     # title = "Modeled cost per TB case diagnosed for Abnormality ≥ 0.30 algorithm",
     # caption = "Annotations show cost per case detected for different scenario from the main analysis."
     x = "Proportion of asymptomatic TB",
-    y = "Cost per case diagnosed (US$)"
+    y = "Cost per case detected (US$)"
   ) +
   annotate("text", 
            x = max(summary_ely5_cxr$p_subclinical), 

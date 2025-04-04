@@ -142,7 +142,7 @@ ggplot(summary_table_ely5_ce, aes(x = incremental_effect, y = incremental_cost, 
   geom_line(data = non_dominated, aes(x = incremental_effect, y = incremental_cost), color = '#264653', linetype = 'dotted') +
   # geom_abline(intercept = 0, slope = WTP, linetype = 'dashed', color = '#2A9D8F', size = 0.7)+ #Hiding WTP
   labs(
-    x = 'Incremental Effect (TB cases diagnosed)',
+    x = 'Incremental Effect (TB cases detected)',
     y = 'Incremental Cost (US$)'
     # title = 'Cost-Effectiveness Plane for Algorithms'
   ) +
