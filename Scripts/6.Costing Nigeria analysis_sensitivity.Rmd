@@ -66,6 +66,7 @@ table_case_finding <-  case_finding %>%
 cost_input <- import(here("Data","cost_input_sensitivity_analysis.xlsx"), which = "cost") %>% 
   clean_names()
 
+
 cost_range <- import(here("Data","cost_input_sensitivity_analysis.xlsx"), which = "cost_range") %>% 
   clean_names()
 
@@ -89,7 +90,7 @@ generate_cost_summary <- function(discount, ely_equipment, ely_training, format_
   cost <- cost_input %>%
     rowwise() %>%
     # Annuitizing equipment cost
-    mutate(unit_cost = ifelse(description %in% c("X-ray instrument - MinXray TR90BH", 
+    mutate(unit_cost = ifelse(description %in% c("X-ray instrument", 
                                                  "GeneXpert") & !is.na(unit_cost),
                               calculate_eac(discount_rate = discount, asset_price = unit_cost, ELY = ely_equipment),
                               unit_cost)) %>%
@@ -124,7 +125,8 @@ generate_cost_summary <- function(discount, ely_equipment, ely_training, format_
     
     # Set quantity to zero for CXR and AI if only Cough OR Any symptom
     if (quantity_col %in% c("quantity_Any_symptom", "quantity_Cough_≥_2_weeks")) {
-      cost[[quantity_col]][cost$description %in% c("X-ray instrument - MinXray TR90BH", "AI licence - qure.ai qXR")] <- 0
+      # cost[[quantity_col]][cost$description %in% c("X-ray instrument - MinXray TR90BH", "AI licence - qure.ai qXR")] <- 0
+      cost[[quantity_col]][cost$description %in% c("X-ray instrument", "AI licence")] <- 0
     }
     
     cost[[time_col]] <- cost$time

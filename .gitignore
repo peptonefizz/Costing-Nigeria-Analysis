@@ -21,6 +21,7 @@ Archive
 
 !**/*.xlsx
 !**/*.jpg
+!**/*.png
 !**/*.pdf
 !**/*.RDS
 
@@ -33,3 +34,4 @@ Data/Updated Data Publication.xlsx
 function_utility.R
 ACF\ analysis.R
 .DS_Store
+.Rproj.user
