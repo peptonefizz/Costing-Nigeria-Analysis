@@ -177,5 +177,7 @@ summary_ely5_cxr %>%
   )
 
 ggsave(here("Output","Subclinical_figure","cost_subclinical.jpg"), plot = last_plot(), width = 9, height = 6, dpi = 600)
+
+ggsave(here("Output","Subclinical_figure","cost_subclinical.tiff"), plot = last_plot(), unit = "in", width = 9, height = 6, dpi = 600, compression = "lzw")
 ```
 

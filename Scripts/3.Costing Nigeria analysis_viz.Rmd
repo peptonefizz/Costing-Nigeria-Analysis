@@ -66,6 +66,8 @@ ggplot(filtered_viz, aes(x = `TB Diagnosed`, y = `Total Cost`, color = Algorithm
   guides(shape = "none", alpha = "none")
 
 ggsave(here("Output","Main_figure","cost_viz.jpg"), plot = last_plot(), width = 9.5, height = 6, dpi = 600)
+
+ggsave(here("Output","Main_figure","cost_viz.tiff"), plot = last_plot(), unit = "in", width = 9.5, height = 6, dpi = 600, compression = "lzw")
 ```
 
 ```{r cost-effectiveness plane}
@@ -164,6 +166,8 @@ ggplot(summary_table_ely5_ce, aes(x = incremental_effect, y = incremental_cost, 
         axis.text = element_text(size = 10))
 
 ggsave(here("Output","Main_figure","ceplane.jpg"), plot = last_plot(), width = 9, height = 6, dpi = 600)
+
+ggsave(here("Output","Main_figure","ceplane.tiff"), plot = last_plot(), unit = "in", width = 9, height = 6, dpi = 600, compression = "lzw")
 ```
 
 ```{r icer}
