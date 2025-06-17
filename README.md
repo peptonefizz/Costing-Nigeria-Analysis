@@ -4,10 +4,12 @@ This repository contains the code, data inputs, and outputs for a Tcost-effectiv
 
 ### 📄 Associated Publications
 **Implementation costs and cost-effectiveness of ultraportable chest X-ray with artificial intelligence in active case finding for tuberculosis in Nigeria**  
-*Currently under peer review*
+_T.Garg, S.John et al._  
+Published in *PLOS Digital Health* (2025)  
+📄 [Read the full paper here](https://doi.org/10.1371/journal.pdig.0000894)
 
 **Comparing tuberculosis symptom screening to chest X-ray with artificial intelligence in an active case finding campaign in Northeast Nigeria**  
-_S.John, S. Abdulkarim et al._  
+_S.John, S.Abdulkarim et al._  
 Published in *BMC Global and Public Health* (2023)  
 📄 [Read the full paper here](https://doi.org/10.1186/s44263-023-00017-2)
 
